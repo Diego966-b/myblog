@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>welcome</title>
-</head>
-
-<body>
-  <p>Pantalla principal</p>
+@extends('layouts.app')
+ 
+@section('title', 'Welcome')
+ 
+@section('sidebar')
+    @parent
+ 
+    <p>This is appended to the master sidebar.</p>
+@endsection
+ 
+@section('content')
+<p>Pantalla principal</p>
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/auth">login</a></li>
@@ -18,6 +19,4 @@
     <li><a href="/category/create">create category</a></li>
     <li><a href="/category/edit/5">edit category</a></li>
   </ul>
-</body>
-
-</html>
+@endsection
